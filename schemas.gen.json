@@ -66,6 +66,7 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "deco-sites/std/loaders/x/redirectsFromCsv.ts",
               "./islands/AddToCartButton.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
@@ -4659,6 +4660,27 @@
           }
         },
         {
+          "title": "deco-sites/std/loaders/x/redirectsFromCsv.ts",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirects"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/loaders/x/redirectsFromCsv.ts"
+              ],
+              "default": "deco-sites/std/loaders/x/redirectsFromCsv.ts"
+            }
+          }
+        },
+        {
           "title": "Audience",
           "description": "Select routes based on the matched audience.",
           "type": "object",
@@ -7843,6 +7865,68 @@
         "count"
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirect": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "title": "From"
+        },
+        "to": {
+          "type": "string",
+          "title": "To"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "temporary",
+              "default": "temporary"
+            },
+            {
+              "type": "string",
+              "const": "permanent",
+              "default": "permanent"
+            }
+          ],
+          "type": "string",
+          "title": "Type"
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ],
+      "title": "Redirect",
+      "titleBy": "from"
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirect[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirect"
+      },
+      "title": "Redirect[]"
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirects": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "The file url or path"
+        },
+        "redirects": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirect[]",
+          "title": "Redirects"
+        }
+      },
+      "required": [
+        "redirects"
+      ],
+      "title": "deco-sites/std/loaders/x/redirectsFromCsv.ts@Redirects"
     },
     "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form": {
       "type": "object",
@@ -14582,6 +14666,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=": {
+      "title": "deco-sites/std/loaders/x/redirectsFromCsv.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM=@Redirects"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/loaders/x/redirectsFromCsv.ts"
+          ],
+          "default": "deco-sites/std/loaders/x/redirectsFromCsv.ts"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g=": {
       "title": "./islands/AddToCartButton.tsx",
       "type": "object",
@@ -16705,6 +16810,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L3dpc2hsaXN0LnRz"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM="
         }
       ]
     },

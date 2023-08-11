@@ -118,9 +118,8 @@ function CategoryList(props: Props) {
                       class="card w-full"
                       src={image}
                       alt={description || label || tag}
-                      width={160}
-                      height={195}
                       loading="lazy"
+                      width={500}
                     />
                   </figure>
                 )}
