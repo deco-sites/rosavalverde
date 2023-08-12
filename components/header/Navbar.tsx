@@ -77,11 +77,10 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
             </a>
           )}
         </div>
-        {
-          /* <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-center">
           {items.map((item) => <NavItem item={item} />)}
-        </div> */
-        }
+        </div>
+        
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           <Buttons variant="search" />
           <Searchbar searchbar={searchbar} />
@@ -107,9 +106,9 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
           <Buttons variant="cart" />
         </div>
       </div>
-      <div class="bg-secondary flex-auto flex justify-center">
+      {/* <div class="bg-secondary flex-auto flex justify-center">
         {items.map((item) => <NavItem item={item} />)}
-      </div>
+      </div> */}
     </>
   );
 }
