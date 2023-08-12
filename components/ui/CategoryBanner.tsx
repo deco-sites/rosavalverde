@@ -40,7 +40,7 @@ function Banner({ banner }: SectionProps<ReturnType<typeof loader>>) {
         />
         <Source
           src={image.desktop}
-          width={1440}
+          width={1920}
           height={200}
           media="(min-width: 767px)"
         />

@@ -9923,6 +9923,24 @@
             "alt"
           ],
           "title": "Logo"
+        },
+        "linkLeft": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "title": "Url"
+            },
+            "title": {
+              "type": "string",
+              "title": "Title"
+            }
+          },
+          "required": [
+            "url",
+            "title"
+          ],
+          "title": "Link Left"
         }
       },
       "required": [
@@ -10165,12 +10183,22 @@
         "action": {
           "type": "object",
           "properties": {
+            "active": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "title": "Active"
+            },
             "href": {
               "type": "string",
               "title": "Href"
             },
             "title": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Title"
             },
             "subTitle": {
@@ -10184,7 +10212,6 @@
           },
           "required": [
             "href",
-            "title",
             "subTitle",
             "label"
           ],
