@@ -14,7 +14,7 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
   linkLeft?: {
     url: string;
     title: string;
-  }
+  };
 }) {
   return (
     <>
@@ -44,12 +44,28 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
 
       {/* Desktop Version */}
       <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 py-2">
-      <div class="flex items-center">
-        <a class="flex flex-col items-center uppercase text-center mx-5" href={ linkLeft?.url }>
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>{ linkLeft?.title }</span>
-        </a>
-      </div>
+        <div class="flex items-center">
+          <a
+            class="flex flex-col items-center uppercase text-center mx-5"
+            href={linkLeft?.url}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="css-i6dzq1"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>{linkLeft?.title}</span>
+          </a>
+        </div>
         <div class="flex-none w-auto">
           {logo && (
             <a
@@ -61,9 +77,11 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
             </a>
           )}
         </div>
-        {/* <div class="flex-auto flex justify-center">
+        {
+          /* <div class="flex-auto flex justify-center">
           {items.map((item) => <NavItem item={item} />)}
-        </div> */}
+        </div> */
+        }
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           <Buttons variant="search" />
           <Searchbar searchbar={searchbar} />
@@ -90,7 +108,7 @@ function Navbar({ items, searchbar, logo, linkLeft }: {
         </div>
       </div>
       <div class="bg-secondary flex-auto flex justify-center">
-          {items.map((item) => <NavItem item={item} />)}
+        {items.map((item) => <NavItem item={item} />)}
       </div>
     </>
   );

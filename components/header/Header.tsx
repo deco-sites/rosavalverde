@@ -50,7 +50,7 @@ export interface Props {
   linkLeft?: {
     url: string;
     title: string;
-  }
+  };
 }
 
 function Header({
@@ -60,7 +60,7 @@ function Header({
   navItems = [],
   suggestions,
   logo,
-  linkLeft
+  linkLeft,
 }: Props) {
   const searchbar = { ..._searchbar, products, suggestions };
   return (
@@ -68,7 +68,12 @@ function Header({
       <header style={{ height: headerHeight }}>
         <div class="bg-base-100 fixed w-full z-50">
           <Alert alerts={alerts} />
-          <Navbar items={navItems} searchbar={searchbar} logo={logo} linkLeft={linkLeft} />
+          <Navbar
+            items={navItems}
+            searchbar={searchbar}
+            logo={logo}
+            linkLeft={linkLeft}
+          />
         </div>
 
         <Modals
