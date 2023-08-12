@@ -61,7 +61,7 @@ function Newsletter(
           class="form-control"
           onSubmit={handleSubmit}
         >
-          <div class="flex gap-3">
+          <div class="flex md:flex-row flex-col gap-3">
             <input
               name="email"
               class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
