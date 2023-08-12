@@ -9941,15 +9941,10 @@
             "title"
           ],
           "title": "Link Left"
-        },
-        "window": {
-          "type": "object",
-          "title": "Window"
         }
       },
       "required": [
-        "alerts",
-        "window"
+        "alerts"
       ],
       "title": "deco-sites/rosavalverde/components/header/Header.tsx@Props"
     },

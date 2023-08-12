@@ -126,7 +126,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
       />
       <figure
         class="relative overflow-hidden"
-        style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
+        style={{ aspectRatio: `${WIDTH} / ${HEIGHT}`, maxHeight: `290px` }}
       >
         {/* Wishlist button */}
         <div
@@ -270,8 +270,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
               </div>
             </div>
             {l?.hide?.installments
-              ? ""
-              : (
+              ? "" : (
                 <div class="text-base-300 text-sm lg:text-base">
                   ou {installments}
                 </div>
