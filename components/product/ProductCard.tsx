@@ -270,7 +270,8 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
               </div>
             </div>
             {l?.hide?.installments
-              ? "" : (
+              ? ""
+              : (
                 <div class="text-base-300 text-sm lg:text-base">
                   ou {installments}
                 </div>
