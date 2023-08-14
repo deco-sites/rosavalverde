@@ -51,8 +51,8 @@ const relative = (url: string) => {
   return `${link.pathname}${link.search}`;
 };
 
-const WIDTH = 200;
-const HEIGHT = 279;
+const WIDTH = 490;
+const HEIGHT = 490;
 
 function ProductCard({ product, preload, itemListName, layout }: Props) {
   const {
