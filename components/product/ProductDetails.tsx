@@ -29,8 +29,8 @@ export interface Props {
   variant?: Variant;
 }
 
-const WIDTH = 360;
-const HEIGHT = 500;
+const WIDTH = 1000;
+const HEIGHT = 1000;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 /**
@@ -139,10 +139,10 @@ function ProductInfo({ page }: { page: ProductDetailsPage }) {
       <div class="mt-4 sm:mt-6">
         <span class="text-sm">
           {description && (
-            <details>
-              <summary class="cursor-pointer">Descrição</summary>
-              <div class="ml-2 mt-2">{description}</div>
-            </details>
+            // <details>
+              // <summary class="cursor-pointer">Descrição</summary>
+              <div class="ml-2 mt-2 text-left leading-6 text-base">{description}</div>
+            //</span> </details>
           )}
         </span>
       </div>
@@ -250,17 +250,17 @@ function Details({
           id={id}
           class="flex flex-row md:flex-col"
         >
-          <div class="flex flex-row md:flex-col">
+          <div class="flex flex-row md:flex-col h-full">
             {/* Dots */}
-            <ul class="flex gap-2 sm:justify-start overflow-auto px-4 sm:px-0 sm:flex-col sm:col-start-1 sm:col-span-1 sm:row-start-1">
+            <ul style={{marginRight: '20px'}} class="flex gap-2 sm:justify-start overflow-auto px-4 sm:px-0 sm:flex-col sm:col-start-1 sm:col-span-1 sm:row-start-1">
               {images.map((img, index) => (
                 <li class="min-w-[63px] sm:min-w-[100px]">
                   <Slider.Dot index={index}>
                     <Image
                       style={{ aspectRatio: ASPECT_RATIO }}
                       class="group-disabled:border-base-300 border rounded "
-                      width={63}
-                      height={87.5}
+                      width={100}
+                      height={100}
                       src={img.url!}
                       alt={img.alternateName}
                     />
@@ -278,8 +278,8 @@ function Details({
                     class="carousel-item w-full"
                   >
                     <Image
-                      class="w-full object-cover"
-                      style={{ maxHeight: "620px" }}
+                      class="w-full object-contain"
+                      // style={{ maxHeight: "620px" }}
                       sizes="(max-width: 640px) 100vw, 40vw"
                       // style={{ aspectRatio: ASPECT_RATIO }}
                       src={img.url!}
@@ -317,7 +317,7 @@ function Details({
               </div>
             </div>
           </div>
-          <div class="right-content">
+          <div class="right-content w-full">
             {/* Product Info */}
             <div class="px-4 sm:pr-0 sm:pl-6 sm:col-start-3 sm:col-span-1 sm:row-start-1">
               <ProductInfo page={page} />
