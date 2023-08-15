@@ -5421,3 +5421,9 @@ details.collapse summary::-webkit-details-marker {
         opacity: 1
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 92px;
+    }
+}
