@@ -97,6 +97,7 @@
               "deco-sites/rosavalverde/sections/Content/Benefits.tsx",
               "deco-sites/rosavalverde/sections/Content/Faq.tsx",
               "deco-sites/rosavalverde/sections/Content/Logos.tsx",
+              "deco-sites/rosavalverde/sections/Content/Lojas.tsx",
               "deco-sites/rosavalverde/sections/Content/Testimonials.tsx",
               "deco-sites/rosavalverde/sections/Footer/Footer.tsx",
               "deco-sites/rosavalverde/sections/Header/Header.tsx",
@@ -9131,6 +9132,76 @@
       "required": [],
       "title": "deco-sites/rosavalverde/sections/Content/Logos.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g=@Loja": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Phone"
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Email"
+        },
+        "adress": {
+          "type": "object",
+          "properties": {
+            "firstLine": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "First Line"
+            },
+            "secondLine": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Second Line"
+            }
+          },
+          "required": [],
+          "title": "Adress"
+        }
+      },
+      "required": [],
+      "title": "Loja"
+    },
+    "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "lojas": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g=@Loja"
+          },
+          "title": "Lojas"
+        }
+      },
+      "required": [
+        "title",
+        "lojas"
+      ],
+      "title": "deco-sites/rosavalverde/sections/Content/Lojas.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial": {
       "type": "object",
       "properties": {
@@ -15288,6 +15359,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g=": {
+      "title": "deco-sites/rosavalverde/sections/Content/Lojas.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/rosavalverde/sections/Content/Lojas.tsx"
+          ],
+          "default": "deco-sites/rosavalverde/sections/Content/Lojas.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4": {
       "title": "deco-sites/rosavalverde/sections/Content/Testimonials.tsx",
       "type": "object",
@@ -16966,6 +17058,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9Mb2phcy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9yb3NhdmFsdmVyZGUvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4"

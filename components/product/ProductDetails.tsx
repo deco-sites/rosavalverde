@@ -250,9 +250,9 @@ function Details({
       <>
         <div
           id={id}
-          class="flex flex-row md:flex-col"
+          class="flex flex-col md:flex-row"
         >
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex flex-col-reverse md:flex-row h-full">
             {/* Dots */}
             <ul
               style={{ marginRight: "20px" }}

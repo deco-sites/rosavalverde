@@ -105,7 +105,7 @@ function ShippingSimulation({ items }: Props) {
       </div>
       <div>
         <form
-          class="join"
+          class="join flex-col md:flex-row gap-3 md:gap-0"
           onSubmit={(e) => {
             e.preventDefault();
             handleSimulation();
