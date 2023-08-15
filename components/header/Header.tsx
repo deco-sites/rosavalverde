@@ -65,7 +65,7 @@ function Header({
   const searchbar = { ..._searchbar, products, suggestions };
   return (
     <>
-      <header className={'header'} style={{ height: headerHeight }}>
+      <header className={"header"} style={{ height: headerHeight }}>
         <div class="bg-base-100 fixed w-full z-50">
           <Alert alerts={alerts} />
           <Navbar

@@ -5424,6 +5424,6 @@ details.collapse summary::-webkit-details-marker {
 
 @media screen and (max-width: 768px) {
     .header {
-        height: 92px;
+        height: 92px !important;
     }
 }
