@@ -140,8 +140,10 @@ function ProductInfo({ page }: { page: ProductDetailsPage }) {
         <span class="text-sm">
           {description && (
             // <details>
-              // <summary class="cursor-pointer">Descrição</summary>
-              <div class="ml-2 mt-2 text-left leading-6 text-base">{description}</div>
+            // <summary class="cursor-pointer">Descrição</summary>
+            <div class="ml-2 mt-2 text-left leading-6 text-base">
+              {description}
+            </div>
             //</span> </details>
           )}
         </span>
@@ -252,7 +254,10 @@ function Details({
         >
           <div class="flex flex-row md:flex-col h-full">
             {/* Dots */}
-            <ul style={{marginRight: '20px'}} class="flex gap-2 sm:justify-start overflow-auto px-4 sm:px-0 sm:flex-col sm:col-start-1 sm:col-span-1 sm:row-start-1">
+            <ul
+              style={{ marginRight: "20px" }}
+              class="flex gap-2 sm:justify-start overflow-auto px-4 sm:px-0 sm:flex-col sm:col-start-1 sm:col-span-1 sm:row-start-1"
+            >
               {images.map((img, index) => (
                 <li class="min-w-[63px] sm:min-w-[100px]">
                   <Slider.Dot index={index}>
