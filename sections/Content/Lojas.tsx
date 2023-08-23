@@ -15,19 +15,19 @@ export interface Props {
 export default function Lojas({ title, lojas }: Props) {
   return (
     <section>
-      <h2 >{title}</h2>
+      <h2>{title}</h2>
       <ul>
         {lojas.map((loja) => {
           return (
-              <li>
-                <div>
-                  <h3>{loja.title}</h3>
-                  <p>{loja.phone}</p>
-                  <p>{loja.email}</p>
-                  <p>{loja.adress?.firstLine}</p>
-                  <p>{loja.adress?.secondLine}</p>
-                </div>
-              </li>
+            <li>
+              <div>
+                <h3>{loja.title}</h3>
+                <p>{loja.phone}</p>
+                <p>{loja.email}</p>
+                <p>{loja.adress?.firstLine}</p>
+                <p>{loja.adress?.secondLine}</p>
+              </div>
+            </li>
           );
         })}
       </ul>
