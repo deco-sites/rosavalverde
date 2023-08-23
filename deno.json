@@ -1,4 +1,5 @@
 {
+  "lock": true,
   "tasks": {
     "start": "deno run -A --unstable --watch=static/sw.js,tailwind.css,sections/,functions/,loaders/,actions/,workflows/,accounts/ dev.ts",
     "gen": "deno run -A dev.ts --gen-only",

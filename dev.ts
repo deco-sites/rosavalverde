@@ -2,6 +2,7 @@
 import dev from "$live/dev.ts";
 // import tailwind from "deco-sites/std/tailwindv3.ts";
 import site from "./site.json" assert { type: "json" };
+import "deco-sites/std/plugins/tailwind/bundler.ts";
 
 // Start tailwind background process generation
 // tailwind();
